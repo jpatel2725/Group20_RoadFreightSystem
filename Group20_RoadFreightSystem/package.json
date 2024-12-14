@@ -1,0 +1,40 @@
+{
+  "name": "road-freight-system",
+  "version": "1.0.0",
+  "description": "Road Freight System project with TypeORM and TypeScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "dev": "ts-node-dev src/index.ts",
+    "migration:run": "npx ts-node -r tsconfig-paths/register node_modules/typeorm/cli.js migration:run -d src/config/data-source.ts",
+    "migration:generate": "npx ts-node -r tsconfig-paths/register node_modules/typeorm/cli.js migration:generate -d src/config/data-source.ts",
+    "migration:revert": "npx ts-node -r tsconfig-paths/register node_modules/typeorm/cli.js migration:revert -d src/config/data-source.ts"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.2",
+    "class-transformer": "^0.4.0",
+    "class-validator": "^0.13.2",
+    "docker": "^1.0.0",
+    "express": "^4.21.2",
+    "pg": "^8.13.1",
+    "reflect-metadata": "^0.1.14",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^3.9.0",
+    "typeorm": "^0.3.20",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/supertest": "^6.0.2",
+    "dotenv": "^10.0.0",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
+    "ts-node-dev": "^1.1.8"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "keywords": []
+}
